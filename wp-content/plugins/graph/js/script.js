@@ -4,55 +4,46 @@
 function requestData()
 {
     $.ajax({
-        url: '../lHighcharts.class.php',
+        url: '../datajson.php',
         success: function(point) {
-            var series = chart.series[0],
+            var series = chart.series[1],
                 shift = series.data.length > 20; // shift if the series is longer than 20
-
-
-
-
             // add the point
-            chart.series[0].addPoint(point, true, shift);
-
-            // call it again after one second
-            setTimeout(requestData, 1000);
+            chart.series[1].addPoint(point, true, shift);
         },
         cache: false
     });
 }
 
-
 /**
- * Au chargement de la page, affiche le graphe
+ * Au chargement de la page, affiche le graph
  */
 $(window).load(function() {
     chart = new Highcharts.Chart({
         chart: {
             renderTo: 'container',
-            defaultSeriesType: 'spline',
+            type: 'bar',
             events: {
                 load: requestData
             }
         },
         title: {
-            text: 'Live random data'
+            text: 'Live votes data'
         },
         xAxis: {
-            type: 'datetime',
-            tickPixelInterval: 150,
-            maxZoom: 20 * 1000
+            categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+            title: {
+                text: null
+            }
         },
         yAxis: {
-            minPadding: 0.2,
-            maxPadding: 0.2,
+            min: 0,
             title: {
-                text: 'Value',
-                margin: 80
+                text: 'Votes',
             }
         },
         series: [{
-            name: 'Random data',
+            name: 'Data',
             data: []
         }]
     });
