@@ -6,11 +6,6 @@ Author: Romain Ardiet & Franck Gorin
 Version: 1.0
 */
 
-<<<<<<< HEAD
-include_once("class/Data.class.php");
-
-=======
->>>>>>> creation json des données des posts
 /**
  * Ici gestion du graph
  */
