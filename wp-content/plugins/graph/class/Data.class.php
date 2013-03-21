@@ -8,6 +8,7 @@
 /**
  * Class Data qui gère les données des posts (votes, noms, etc)
  */
+
 class Data
 {
 
