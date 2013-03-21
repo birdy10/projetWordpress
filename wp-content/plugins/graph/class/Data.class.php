@@ -9,6 +9,8 @@
  * Class Data qui gère les données des posts (votes, noms, etc)
  */
 
+include_once($_SERVER["DOCUMENT_ROOT"] . '/projetWordpress/wp-blog-header.php');
+
 class Data
 {
 

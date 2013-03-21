@@ -4,10 +4,11 @@ function requestData()
     jQuery.ajax({
         url: 'http://127.0.0.1/projetWordpress/wp-content/plugins/graph/dataJson.php',
         success: function(point) {
-            var series = chart.series[1],
-                shift = series.data.length > 20; // shift if the series is longer than 20
+            var series = chart.series[0],
+                shift = series.data.length; // shift if the series is longer than 20
             // add the point
-            chart.series[1].addPoint(point, true, shift);
+            console.log(point);
+            series.addPoint(point, true, shift);
         },
         error: function(error) {
             console.log(error);
@@ -33,7 +34,7 @@ jQuery(window).load(function() {
             text: 'Live votes data'
         },
         xAxis: {
-            categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+            categories: ['Votes'],
             title: {
                 text: null
             }
@@ -41,12 +42,12 @@ jQuery(window).load(function() {
         yAxis: {
             min: 0,
             title: {
-                text: 'Votes',
+                text: 'Votes'
             }
         },
         series: [{
-            name: 'Data',
-            data: []
+            name: 'Random data',
+            data: [50, 100, 58]
         }]
     });
 });

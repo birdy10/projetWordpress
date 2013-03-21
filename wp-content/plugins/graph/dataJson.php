@@ -15,16 +15,17 @@ $_oData = new Data();
 $_oAllPosts = $_oData->getAllPosts();
 
 $_aJson;
-foreach($_oAllPosts as $_aPost){
+foreach($_oAllPosts as $_aPost)
+{
     $_iVote = $_oData->getVotesByPostId($_aPost->ID);
 
-    if(isset($_iVote)){
+    if(isset($_iVote)) {
         $_iVote = $_iVote;
-    }else{
+    } else {
         $_iVote = 0;
     }
     // Create a PHP array and echo it as JSON
-    $_aJson[] = $_aPost->post_title;
+    //$_aJson[] = $_aPost->post_title;
     $_aJson[] = $_iVote;
 
 }

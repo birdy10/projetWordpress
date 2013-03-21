@@ -13,7 +13,6 @@ include_once('class/Highcharts.class.php');
 
 $_oTest = new Highcharts();
 
-$_sGraph = $_oTest->buildChartHtml();
-echo $_sGraph;
+//echo $_sGraph;
 
 //add_shortcode( 'graphic', 'gett_All' );

@@ -28,24 +28,5 @@ class Highcharts
         echo "<script type='text/javascript' src='http://127.0.0.1/projetWordpress/wp-content/plugins/graph/js/script.js'></script>";
     }
 
-
-    /**
-     * Fonction qui construit le html de la page
-     */
-    public function buildChartHtml()
-    {
-        $_sHtml = "<div id='container' style='min-width: 400px; height: 400px; margin: 0 auto'></div>";
-        return $_sHtml;
-    }
-
-    /**
-     * Fonction qui donne les données pour le js (name du post et nombre de ses votes)
-     */
-    public function renderDataForJS()
-    {
-
-    }
-
-
 }
 
