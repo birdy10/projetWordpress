@@ -6,7 +6,7 @@ Author: Romain Ardiet & Franck Gorin
 Version: 1.0
 */
 
-include_once("Data.class.php");
+include_once("class/Data.class.php");
 
 /**
  * Ici gestion du graph

@@ -23,9 +23,9 @@ class Highcharts
     public function loadJS()
     {
         wp_enqueue_script( 'jquery' );
-        wp_enqueue_script( 'highlight', plugins_url( '/js/highlight.js', __FILE__ ), array( 'jquery' ) );
-        wp_enqueue_script( 'export', plugins_url( '/js/exporting.js', __FILE__ ), array( 'jquery' ) );
-        wp_enqueue_script( 'script', plugins_url( '/js/script.js', __FILE__ ), array( 'jquery' ) );
+        wp_enqueue_script( 'highlight', plugins_url( '../js/highlight.js', __FILE__ ), array( 'jquery' ) );
+        wp_enqueue_script( 'export', plugins_url( '../js/exporting.js', __FILE__ ), array( 'jquery' ) );
+        wp_enqueue_script( 'script', plugins_url( '../js/script.js', __FILE__ ), array( 'jquery' ) );
     }
 
 
