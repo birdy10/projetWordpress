@@ -46,7 +46,7 @@ class Data
      */
     public function getVotesByPostId($_iPostID)
     {
-        $_aVote = get_post_custom($_iPostID);
+        $_aVote = get_post_meta($_iPostID, "votes", true);
 
         return $_aVote;
     }
