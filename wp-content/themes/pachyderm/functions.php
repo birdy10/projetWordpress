@@ -190,3 +190,23 @@ add_filter( 'excerpt_more', 'pachyderm_new_excerpt_more' );
  * Implement the Custom Header feature
  */
 require( get_template_directory() . '/inc/custom-header.php' );
+
+
+
+
+
+
+
+/**
+ * CUSTOM FIELDS 'VOTES' POUR LES ARTICLES
+ * 0 par défaut lorsqu'un article est ajouté (puisqu'il n'a pas encore recu de votes)
+ **/
+add_action('publish_post', 'add_custom_field_votes');
+function add_custom_field_votes($post_ID)
+{
+    global $wpdb;
+    if(!wp_is_post_revision($post_ID))
+    {
+        add_post_meta($post_ID, 'votes', '0', true);
+    }
+}
