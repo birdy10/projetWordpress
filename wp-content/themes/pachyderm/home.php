@@ -8,9 +8,9 @@
 get_header();
 ?>
 
-<h1>Timeline </h1>
+<h1>Graphique : </h1>
 
-<?php ?>
+<?php // echo do_shortcode("[graphic]"); ?>
 
 
 <?php  get_footer(); ?>
