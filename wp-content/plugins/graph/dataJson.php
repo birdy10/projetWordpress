@@ -25,9 +25,8 @@ foreach($_oAllPosts as $_aPost)
         $_iVote = 0;
     }
     // Create a PHP array and echo it as JSON
-    //$_aJson[] = $_aPost->post_title;
-    $_aJson[] = $_iVote;
-
+    $_aJson['titles'][] = $_aPost->post_title;
+    $_aJson['votes'][] = (int)$_iVote;
 }
 
 echo json_encode($_aJson);
