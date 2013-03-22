@@ -12,6 +12,11 @@ jQuery(window).load(function() {
         title: {
             text: 'Technologies émergentes'
         },
+        navigation: {
+            buttonOptions: {
+                enabled: false
+            }
+        },
         xAxis: {
             categories: [],
             title: {
@@ -30,11 +35,16 @@ jQuery(window).load(function() {
             }
         },
         series: [{
+            showInLegend: false,
             name: 'votes reçus',
             data: []
-        }]
+        }],
+        credits: {
+            enabled: false
+        }
     };
-    //console.log(options.series);
+
+    // Fonction ajax pour récuperer les données des posts
     jQuery.ajax({
         url: 'http://127.0.0.1/projetWordpress/wp-content/plugins/graph/dataJson.php',
         success: function(data) {
@@ -48,4 +58,5 @@ jQuery(window).load(function() {
         },
         cache: false
     });
+
 });
