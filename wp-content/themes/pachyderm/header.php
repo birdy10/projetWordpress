@@ -10,6 +10,7 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php
@@ -39,7 +40,12 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/layouts/ie.css"/>
 <![endif]-->
+
+
 <?php wp_head(); ?>
+<link rel='stylesheet' type='text/css' href='http://127.0.0.1/projetWordpress/wp-content/plugins/graph/css/default.css' />
+<link rel='stylesheet' type='text/css' href='http://127.0.0.1/projetWordpress/wp-content/plugins/graph/css/component.css' />
+<script type='text/javascript' src='http://127.0.0.1/projetWordpress/wp-content/plugins/graph/js/modernizr.custom.js'></script>
 </head>
 
 <body <?php body_class(); ?>>

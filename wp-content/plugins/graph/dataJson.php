@@ -9,7 +9,7 @@
 // Set the JSON header
 header("Content-type: text/json");
 
-include_once("class/Data.class.php");
+include ("class/Data.class.php");
 
 $_oData = new Data();
 $_oAllPosts = $_oData->getAllPosts();

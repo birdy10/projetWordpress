@@ -37,7 +37,8 @@ jQuery(window).load(function() {
         series: [{
             showInLegend: false,
             name: 'votes reçus',
-            data: []
+            data: [],
+            color: '#7c5a50'
         }],
         credits: {
             enabled: false

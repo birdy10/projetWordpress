@@ -8,11 +8,14 @@
 get_header();
 ?>
 
-<h1>Graphique : </h1>
-<div id='container' style='min-width: 500px; height: 400px; margin: 0 auto'></div>
+<h2>Graphique : </h2>
+<div id='container' style='min-width: 500px; height: 500px; margin: 0 auto'></div>
 
 
 <?php // echo do_shortcode("[graphic]"); ?>
 
+<h2>Liste des technologies : </h2>
+
+<?php echo do_shortcode('[list]'); ?>
 
 <?php  get_footer(); ?>
