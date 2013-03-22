@@ -20,7 +20,7 @@ jQuery(window).load(function() {
         },
         yAxis: {
             min: 0,
-
+            type: 'int',
             title: {
                 text: 'Nombre de votes',
                 align: 'high'
@@ -30,7 +30,7 @@ jQuery(window).load(function() {
             }
         },
         series: [{
-            name: 'votes',
+            name: 'votes reçus',
             data: []
         }]
     };
