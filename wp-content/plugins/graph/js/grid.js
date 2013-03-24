@@ -321,7 +321,7 @@ var Grid = (function() {
 			// create Preview structure:
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
-			this.$href = $( '<a href="#">Visit website</a>' );
+			this.$href = $( '<a href="#">Votez pour cette technologie</a>' );
 			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
@@ -415,7 +415,7 @@ var Grid = (function() {
 				if( typeof this.$largeImg !== 'undefined' ) {
 					this.$largeImg.fadeOut( 'fast' );
 				}
-				this.$previewEl.css( 'height', 0 );
+				this.$previewEl.css( 'height', 0 );				
 				// the current expanded item (might be different from this.$item)
 				var $expandedItem = $items.eq( this.expandedIdx );
 				$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
@@ -453,9 +453,11 @@ var Grid = (function() {
 					self.$item.addClass( 'og-expanded' );
 				};
 
-			this.calcHeight();
+			this.calcHeight();			
 			this.$previewEl.css( 'height', this.height );
 			this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
+			this.$previewEl.css( 'z-index', 999 );
+			this.$previewEl.css( 'margin-top', 170 );
 
 			if( !support ) {
 				onEndFn.call();
