@@ -9,7 +9,7 @@
  * Class Data qui gère les données des posts (votes, noms, etc)
  */
 
-require_once ($_SERVER["DOCUMENT_ROOT"] . '/projetWordpress/wp-blog-header.php');
+//require_once ($_SERVER["DOCUMENT_ROOT"] . '/projetWordpress/wp-blog-header.php');
 
 
 class Data
@@ -66,6 +66,43 @@ class Data
         $_iVotesNumber = get_post_meta($_iPostID, 'votes', true);   
         $_iVotesNumber++;
         update_post_meta($_iPostID, 'votes', $_iVotesNumber);
+    }
+
+
+    public function createDataForJson(){
+        $_oData = new Data();
+        $_oAllPosts = $_oData->getAllPosts();
+
+        $_aJson;
+        foreach($_oAllPosts as $_aPost)
+        {
+            $_iVote = $_oData->getVotesByPostId($_aPost->ID);
+
+            if(isset($_iVote)) {
+                $_iVote = $_iVote;
+            } else {
+                $_iVote = 0;
+            }
+            // Create a PHP array and echo it as JSON
+            $_aJson['titles'][] = $_aPost->post_title;
+            $_aJson['votes'][] = (int)$_iVote;
+        }
+
+        return json_encode($_aJson);
+    }
+
+
+    public function createFileJson($_aJson){
+
+        $filename = 'dataJson.json';
+        
+        if(!$fp = fopen($filename, 'w+')){
+            echo "Echec de l'ouverture du fichier";
+            exit;
+        }else{
+            fwrite($fp, $_aJson);
+            fclose($fp);
+        }
     }
 
 }

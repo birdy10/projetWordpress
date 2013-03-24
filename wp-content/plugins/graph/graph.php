@@ -13,7 +13,13 @@ include_once('class/ManageVotes.class.php');
  * Ici gestion du graph
  */
 
+$_oData = new Data();
+$_aJson = $_oData->createDataForJson();
+$_oData->createFileJson($_aJson);
+
 $_oTest = new Highcharts();
+
+
 
 function display_all()
 {

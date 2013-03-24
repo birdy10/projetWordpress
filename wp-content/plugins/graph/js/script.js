@@ -47,9 +47,11 @@ jQuery(window).load(function() {
 
     // Fonction ajax pour récuperer les données des posts
     jQuery.ajax({
-        url: 'http://127.0.0.1/projetWordpress/wp-content/plugins/graph/dataJson.php',
+        dataType: "json",
+        url: 'http://127.0.0.1/projetWordpress/dataJson.json',
         success: function(data) {
-            data = JSON.parse(data);
+            console.log(data);
+            //data = JSON.parse(data);
             options.xAxis.categories = data.titles;
             options.series[0].data = data.votes;
             var chart = new Highcharts.Chart(options);

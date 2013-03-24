@@ -7,7 +7,7 @@
  */
 
 // Set the JSON header
-header("Content-type: text/json");
+//header("Content-type: text/json");
 
 include ("class/Data.class.php");
 
