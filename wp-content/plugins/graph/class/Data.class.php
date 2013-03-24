@@ -55,4 +55,17 @@ class Data
         return $_aVote;
     }
 
+
+    /**
+    * Fonction qui ajoute un vote à un post spécifique (incrémente le nombre de votes)
+    *
+    * @param $postID
+    * @return void
+    */
+    public function addVotes($_iPostID){  
+        $_iVotesNumber = get_post_meta($_iPostID, 'votes', true);   
+        $_iVotesNumber++;
+        update_post_meta($_iPostID, 'votes', $_iVotesNumber);
+    }
+
 }

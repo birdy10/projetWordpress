@@ -41,7 +41,7 @@ class ManageVotes {
                 $_aImg = wp_get_attachment_image_src( get_post_thumbnail_id( $_oPost->ID ));
 
                 $_sHTML .= "<li>
-                                <a href='".get_permalink($_oPost->ID)."' data-largesrc='".$_aImg[0]."' data-title='".get_the_title($_oPost->ID)."' data-description='".get_post_field('post_content', $_oPost->ID)."'>
+                                <a href='".get_permalink($_oPost->ID)."' id='".$_oPost->ID."' data-largesrc='".$_aImg[0]."' data-title='".get_the_title($_oPost->ID)."' data-description='".get_post_field('post_content', $_oPost->ID)."'>
                                     ".get_the_post_thumbnail($_oPost->ID, 'thumbnail')."
                                 </a>
                             </li>";
