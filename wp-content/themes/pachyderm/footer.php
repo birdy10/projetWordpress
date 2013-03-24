@@ -17,8 +17,8 @@
 <?php wp_footer(); ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type='text/javascript' src='http://127.0.0.1/projetWordpress/wp-content/plugins/graph/js/grid.js'></script>
-    <script type='text/javascript' src='http://127.0.0.1/projetWordpress/wp-content/plugins/graph/js/gridinit.js'></script>
+    <script type='text/javascript' src='http://wordpress.etuwebdev.fr/wp-content/plugins/graph/js/grid.js'></script>
+    <script type='text/javascript' src='http://wordpress.etuwebdev.fr/wp-content/plugins/graph/js/gridinit.js'></script>
 
 </body>
 </html>

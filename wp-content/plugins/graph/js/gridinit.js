@@ -24,14 +24,11 @@ $(window).on('hashchange', function() {
 });
 
 
-
-
-
 function callAjax(id){
 	jQuery.ajax({
 		type: "POST",
 		data: {data:id},
-        url: 'http://127.0.0.1/projetWordpress/wp-content/plugins/graph/addVote.php',
+        url: 'http://wordpress.etuwebdev.fr/wp-content/plugins/graph/addVote.php',
         success: function(data) {
     		alert(data);
         },

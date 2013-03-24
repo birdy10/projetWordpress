@@ -43,9 +43,9 @@
 
 
 <?php wp_head(); ?>
-<link rel='stylesheet' type='text/css' href='http://127.0.0.1/projetWordpress/wp-content/plugins/graph/css/default.css' />
-<link rel='stylesheet' type='text/css' href='http://127.0.0.1/projetWordpress/wp-content/plugins/graph/css/component.css' />
-<script type='text/javascript' src='http://127.0.0.1/projetWordpress/wp-content/plugins/graph/js/modernizr.custom.js'></script>
+<link rel='stylesheet' type='text/css' href='http://wordpress.etuwebdev.fr/wp-content/plugins/graph/css/default.css' />
+<link rel='stylesheet' type='text/css' href='http://wordpress.etuwebdev.fr/wp-content/plugins/graph/css/component.css' />
+<script type='text/javascript' src='http://wordpress.etuwebdev.fr/wp-content/plugins/graph/js/modernizr.custom.js'></script>
 </head>
 
 <body <?php body_class(); ?>>

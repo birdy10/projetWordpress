@@ -48,7 +48,7 @@ jQuery(window).load(function() {
     // Fonction ajax pour récuperer les données des posts
     jQuery.ajax({
         dataType: "json",
-        url: 'http://127.0.0.1/projetWordpress/dataJson.json',
+        url: 'http://wordpress.etuwebdev.fr/dataJson.json',
         success: function(data) {
             console.log(data);
             //data = JSON.parse(data);
