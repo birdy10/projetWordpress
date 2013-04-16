@@ -9,7 +9,7 @@
  * Class Data qui gère les données des posts (votes, noms, etc)
  */
 
-//require_once ($_SERVER["DOCUMENT_ROOT"] . '/projetWordpress/wp-blog-header.php');
+require_once ($_SERVER["DOCUMENT_ROOT"] . '/wp-blog-header.php');
 
 
 class Data
@@ -20,7 +20,6 @@ class Data
      */
     public function __construct()
     {
-
     }
 
     /**
@@ -62,8 +61,8 @@ class Data
     * @param $postID
     * @return void
     */
-    public function addVotes($_iPostID){  
-        $_iVotesNumber = get_post_meta($_iPostID, 'votes', true);   
+    public function addVotes($_iPostID){
+        $_iVotesNumber = get_post_meta($_iPostID, 'votes', true);
         $_iVotesNumber++;
         update_post_meta($_iPostID, 'votes', $_iVotesNumber);
     }
@@ -73,7 +72,7 @@ class Data
         $_oData = new Data();
         $_oAllPosts = $_oData->getAllPosts();
 
-        $_aJson;
+        $_aJson = array();
         foreach($_oAllPosts as $_aPost)
         {
             $_iVote = $_oData->getVotesByPostId($_aPost->ID);

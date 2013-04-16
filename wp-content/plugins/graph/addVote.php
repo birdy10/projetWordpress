@@ -14,6 +14,4 @@ $_iPostID = $_POST['data'];
 $_oData = new Data();
 $_oData->addVotes($_iPostID);
 
-echo 'Votre vote a été pris en compte';
-
 ?>

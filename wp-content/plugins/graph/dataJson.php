@@ -14,12 +14,12 @@ include ("class/Data.class.php");
 $_oData = new Data();
 $_oAllPosts = $_oData->getAllPosts();
 
-$_aJson;
-foreach($_oAllPosts as $_aPost)
+$_aJson = array();
+foreach ($_oAllPosts as $_aPost)
 {
     $_iVote = $_oData->getVotesByPostId($_aPost->ID);
 
-    if(isset($_iVote)) {
+    if (isset($_iVote)) {
         $_iVote = $_iVote;
     } else {
         $_iVote = 0;

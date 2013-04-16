@@ -13,7 +13,6 @@ $(window).on('hashchange', function() {
 	if($i < 2)
 	{
 		var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
-    	alert (hash);
     	callAjax(hash);
 	}
 	else
@@ -30,7 +29,7 @@ function callAjax(id){
 		data: {data:id},
         url: 'http://wordpress.etuwebdev.fr/wp-content/plugins/graph/addVote.php',
         success: function(data) {
-    		alert(data);
+            alert('Votre vote a été pris en compte !');
         },
         error: function(error) {
             console.log(error);
